@@ -19,7 +19,7 @@ m1    compression           lzjb                   local\
 m2    compression           lz4                    local\
 m3    compression           gzip-9                 local\
 m4    compression           zle                    local
-
+---
 [root@otus-task5 ~]# **ls -l /m***\
 /m1:\
 total 22065\
