@@ -2,7 +2,7 @@
 Отработать навыки работы с созданием томов export/import и установкой параметров.
 1. Определение алгоритма с наилучшим сжатием.
 2. Определить настройки пула.
-3. Найти сообщение от преподавателей.
+3. Работа со снапшотом. Найти сообщение от преподавателей.
 
 Цель:\
 Научиться самостоятельно устанавливать ZFS, настраивать пулы, изучить основные возможности ZFS.
@@ -94,5 +94,8 @@ otus  compression  zle       local\
 [root@otus-task5 ~]# **zfs get checksum otus**\
 NAME  PROPERTY  VALUE      SOURCE\
 otus  checksum  sha256     local
-### 3. Найти сообщение от преподавателей ###
-jklj
+### 3. Работа со снапшотом. Найти сообщение от преподавателей ###
+[root@otus-task5 ~]# **find /otus/test -name "secret_message"**\
+/otus/test/task1/file_mess/secret_message\
+[root@otus-task5 ~]# **cat /otus/test/task1/file_mess/secret_message**\
+https://otus.ru/lessons/linux-hl/
