@@ -48,7 +48,7 @@ m2    17.8M   334M     17.6M  /m2\
 **m3    11.0M   341M     10.7M  /m3**\
 m4    39.5M   312M     39.2M  /m4
 
-Степень сжатия файлов:
+Степень сжатия файлов:\
 [root@otus-task5 ~]# **zfs get all | grep compressratio | grep -v ref**\
 m1    compressratio         1.81x                  -\
 m2    compressratio         2.22x                  -\
