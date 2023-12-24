@@ -56,7 +56,7 @@ m2    compressratio         2.22x                  -\
 m4    compressratio         1.00x                  -\
 Видно, что алгоритм сжатия gzip-9 - самый эффективный.
 ### 2. Определить настройки пула ###
-Проверим, возможно ли импортировать данный каталог в пул:\
+Проверим, возможно ли импортировать данный каталог в пул:
 ```
 [root@otus-task5 ~]# zpool import -d zpoolexport/
    pool: otus
@@ -70,7 +70,7 @@ m4    compressratio         1.00x                  -\
             /root/zpoolexport/filea  ONLINE
             /root/zpoolexport/fileb  ONLINE
 ```
-Информация о составе импортированного пула:\
+Информация о составе импортированного пула:
 ```
 [root@otus-task5 ~]# zpool status
 ...
