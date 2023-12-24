@@ -79,3 +79,20 @@ config:
 
 errors: No known data errors
 ```
+[root@otus-task5 ~]# **zfs get available otus**\
+NAME  PROPERTY   VALUE  SOURCE\
+otus  available  350M   -\
+[root@otus-task5 ~]# **zfs get readonly otus**\
+NAME  PROPERTY  VALUE   SOURCE\
+otus  readonly  off     default\
+[root@otus-task5 ~]# **zfs get recordsize otus**\
+NAME  PROPERTY    VALUE    SOURCE\
+otus  recordsize  128K     local\
+[root@otus-task5 ~]# **zfs get compression otus**\
+NAME  PROPERTY     VALUE     SOURCE\
+otus  compression  zle       local\
+[root@otus-task5 ~]# **zfs get checksum otus**\
+NAME  PROPERTY  VALUE      SOURCE\
+otus  checksum  sha256     local
+### 3. Найти сообщение от преподавателей ###
+jklj
