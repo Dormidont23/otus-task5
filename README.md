@@ -49,4 +49,17 @@ m2    compressratio         2.22x                  -\
 **m3    compressratio         3.63x                  -**\
 m4    compressratio         1.00x                  -\
 Видно, что алгоритм сжатия gzip-9 - самый эффективный.
+### 2. Определить настройки пула ###
+```
+[root@otus-task5 ~]# zpool import -d zpoolexport
+   pool: otus
+     id: 6554193320433390805
+  state: ONLINE
+ action: The pool can be imported using its name or numeric identifier.
+ config:
 
+        otus                         ONLINE
+          mirror-0                   ONLINE
+            /root/zpoolexport/filea  ONLINE
+            /root/zpoolexport/fileb  ONLINE
+```
