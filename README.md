@@ -1,11 +1,11 @@
 ## Задание № 5. Практические навыки работы с ZFS ##
 Отработать навыки работы с созданием томов export/import и установкой параметров.
 1. Определение алгоритма с наилучшим сжатием.
-2. Определить настройки pool’a.
+2. Определить настройки пула.
 3. Найти сообщение от преподавателей.
 
 Цель:\
-Научится самостоятельно устанавливать ZFS, настраивать пулы, изучить основные возможности ZFS.
+Научиться самостоятельно устанавливать ZFS, настраивать пулы, изучить основные возможности ZFS.
 ### 1. Определение алгоритма с наилучшим сжатием ###
 [root@otus-task5 ~]# **zpool list**\
 NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT\
@@ -35,4 +35,18 @@ total 10961\
 /m4:\
 total 40069\
 -rw-r--r--. 1 root root 40997929 Dec  2 09:17 pg2600.converter.log
+
+[root@otus-task5 ~]# **zfs list**\
+NAME   USED  AVAIL     REFER  MOUNTPOINT\
+m1    21.8M   330M     21.6M  /m1\
+m2    17.8M   334M     17.6M  /m2\
+**m3    11.0M   341M     10.7M  /m3**\
+m4    39.5M   312M     39.2M  /m4
+
+[root@otus-task5 ~]# **zfs get all | grep compressratio | grep -v ref**\
+m1    compressratio         1.81x                  -\
+m2    compressratio         2.22x                  -\
+**m3    compressratio         3.63x                  -**\
+m4    compressratio         1.00x                  -\
+Видно, что алгоритм сжатия gzip-9 - самый эффективный.
 
