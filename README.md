@@ -63,3 +63,19 @@ m4    compressratio         1.00x                  -\
             /root/zpoolexport/filea  ONLINE
             /root/zpoolexport/fileb  ONLINE
 ```
+```
+[root@otus-task5 ~]# zpool status
+...
+  pool: otus
+ state: ONLINE
+  scan: none requested
+config:
+
+        NAME                         STATE     READ WRITE CKSUM
+        otus                         ONLINE       0     0     0
+          mirror-0                   ONLINE       0     0     0
+            /root/zpoolexport/filea  ONLINE       0     0     0
+            /root/zpoolexport/fileb  ONLINE       0     0     0
+
+errors: No known data errors
+```
