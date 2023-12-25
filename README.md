@@ -73,6 +73,7 @@ m2    compressratio         2.22x                  -\
 m4    compressratio         1.00x                  -\
 Видно, что алгоритм сжатия gzip-9 - самый эффективный.
 ### 2. Определить настройки пула ###
+Скачиваем архив в каталог **/root**:\
 [root@otus-task5 ~]# **wget -O archive.tar.gz --no-check-certificate 'https://drive.usercontent.google.com/download?id=1MvrcEp-WgAQe57aDEzxSRalPAwbNN1Bb&export=download'**
 ```
 --2023-12-25 08:30:49--  https://drive.usercontent.google.com/download?id=1MvrcEp-WgAQe57aDEzxSRalPAwbNN1Bb&export=download
@@ -86,6 +87,7 @@ Saving to: ‘archive.tar.gz’
 
 2023-12-25 08:30:56 (5.82 MB/s) - ‘archive.tar.gz’ saved [7275140/7275140]
 ```
+Разархивируем его:\
 [root@otus-task5 ~]# **tar -xzvf archive.tar.gz**\
 zpoolexport/\
 zpoolexport/filea\
