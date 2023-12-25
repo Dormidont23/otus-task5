@@ -93,7 +93,7 @@ zpoolexport/\
 zpoolexport/filea\
 zpoolexport/fileb
 
-Проверим, возможно ли импортировать данный каталог в пул:
+Проверим, возможно ли импортировать этот каталог в пул:\
 [root@otus-task5 ~]# **zpool import -d zpoolexport/**
 ```
    pool: otus
