@@ -14,13 +14,14 @@
 [root@otus-task5 ~]# **zpool create m4 mirror /dev/sdh /dev/sdi**
 
 Информация о пулах:\
-[root@otus-task5 ~]# **zpool list**\
-NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT\
-m1     480M  21.9M   458M        -         -     2%     4%  1.00x    ONLINE  -\
-m2     480M  17.9M   462M        -         -     2%     3%  1.00x    ONLINE  -\
-m3     480M  11.1M   469M        -         -     1%     2%  1.00x    ONLINE  -\
-m4     480M  39.6M   440M        -         -     5%     8%  1.00x    ONLINE  -
-
+[root@otus-task5 ~]# **zpool list**
+```
+NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+m1     480M   118K   480M        -         -     0%     0%  1.00x    ONLINE  -
+m2     480M   118K   480M        -         -     0%     0%  1.00x    ONLINE  -
+m3     480M   118K   480M        -         -     0%     0%  1.00x    ONLINE  -
+m4     480M   118K   480M        -         -     0%     0%  1.00x    ONLINE  -
+```
 Добавим разные алгоритмы сжатия в каждую файловую систему:\
 [root@otus-task5 ~]# **zfs set compression=lzjb m1**\
 [root@otus-task5 ~]# **zfs set compression=lz4 m2**\
