@@ -13,12 +13,6 @@
 [root@otus-task5 ~]# **zpool create m3 mirror /dev/sdf /dev/sdg**\
 [root@otus-task5 ~]# **zpool create m4 mirror /dev/sdh /dev/sdi**
 
-Добавим разные алгоритмы сжатия в каждую файловую систему:\
-[root@otus-task5 ~]# **zfs set compression=lzjb m1**\
-[root@otus-task5 ~]# **zfs set compression=lz4 m2**\
-[root@otus-task5 ~]# **zfs set compression=gzip-9 m3**\
-[root@otus-task5 ~]# **zfs set compression=zle m4**
-
 Информация о пулах:\
 [root@otus-task5 ~]# **zpool list**\
 NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT\
@@ -26,6 +20,12 @@ m1     480M  21.9M   458M        -         -     2%     4%  1.00x    ONLINE  -\
 m2     480M  17.9M   462M        -         -     2%     3%  1.00x    ONLINE  -\
 m3     480M  11.1M   469M        -         -     1%     2%  1.00x    ONLINE  -\
 m4     480M  39.6M   440M        -         -     5%     8%  1.00x    ONLINE  -
+
+Добавим разные алгоритмы сжатия в каждую файловую систему:\
+[root@otus-task5 ~]# **zfs set compression=lzjb m1**\
+[root@otus-task5 ~]# **zfs set compression=lz4 m2**\
+[root@otus-task5 ~]# **zfs set compression=gzip-9 m3**\
+[root@otus-task5 ~]# **zfs set compression=zle m4**
 
 Все файловые системы имеют разные методы сжатия:\
 [root@otus-task5 ~]# **zfs get all | grep compression**\
