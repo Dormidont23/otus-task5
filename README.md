@@ -107,8 +107,7 @@ zpoolexport/fileb
             /root/zpoolexport/filea  ONLINE
             /root/zpoolexport/fileb  ONLINE
 ```
-Информация о составе импортированного пула:
-
+Информация о составе импортированного пула (имя пула, тип raid'а и его состав):\
 [root@otus-task5 ~]# **zpool status**
 ```
 ...
