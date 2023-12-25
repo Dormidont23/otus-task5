@@ -106,19 +106,23 @@ errors: No known data errors
 Размер хранилища:\
 [root@otus-task5 ~]# **zfs get available otus**\
 NAME  PROPERTY   VALUE  SOURCE\
-otus  available  350M   -\
+otus  available  350M   -
+
 Тип пула:\
 [root@otus-task5 ~]# **zfs get readonly otus**\
 NAME  PROPERTY  VALUE   SOURCE\
-otus  readonly  off     default\
+otus  readonly  off     default
+
 Значение recordsize:\
 [root@otus-task5 ~]# **zfs get recordsize otus**\
 NAME  PROPERTY    VALUE    SOURCE\
-otus  recordsize  128K     local\
+otus  recordsize  128K     local
+
 Какое сжатие используется:\
 [root@otus-task5 ~]# **zfs get compression otus**\
 NAME  PROPERTY     VALUE     SOURCE\
-otus  compression  zle       local\
+otus  compression  zle       local
+
 Какая контрольная сумма используется:\
 [root@otus-task5 ~]# **zfs get checksum otus**\
 NAME  PROPERTY  VALUE      SOURCE\
