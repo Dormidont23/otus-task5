@@ -35,6 +35,9 @@ m2    compression           lz4                    local\
 m3    compression           gzip-9                 local\
 m4    compression           zle                    local
 
+Скачаем один и тот же текстовый файл во все пулы:\
+[root@otus-task5 ~]# **for i in {1..4}; do wget -P /m$i https://gutenberg.org/cache/epub/2600/pg2600.converter.log; done**
+
 Убедимся, что файл был скачан во все пулы:\
 [root@otus-task5 ~]# **ls -l /m***\
 /m1:\
