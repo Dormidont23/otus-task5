@@ -107,6 +107,8 @@ zpoolexport/fileb
             /root/zpoolexport/filea  ONLINE
             /root/zpoolexport/fileb  ONLINE
 ```
+Делаем импорт данного пула:\
+[root@otus-task5 ~]# **zpool import -d zpoolexport/ otus**\
 Информация о составе импортированного пула (имя пула, тип raid'а и его состав):\
 [root@otus-task5 ~]# **zpool status**
 ```
@@ -149,9 +151,16 @@ otus  compression  zle       local
 NAME  PROPERTY  VALUE      SOURCE\
 otus  checksum  sha256     local
 ### 3. Работа со снапшотом. Найти сообщение от преподавателей ###
+Скачиваем необходимый файл:\
+[root@otus-task5 ~]# **wget -O otus_task2.file --no-check-certificate https://drive.usercontent.google.com/download?id=1wgxjih8YZ-cqLqaZVa0lA3h3Y029c3oI&export=download**
+
+Восстановим файловую систему из снапшота:\
+[root@otus-task5 ~]# **zfs receive otus/test@today < otus_task2.file**
+
 Ищем в каталоге **/otus/test** файл с именем **secret_message**:\
 [root@otus-task5 ~]# **find /otus/test -name "secret_message"**\
-/otus/test/task1/file_mess/secret_message\
+/otus/test/task1/file_mess/secret_message
+
 Содержимое этого файла:\
 [root@otus-task5 ~]# **cat /otus/test/task1/file_mess/secret_message**\
 https://otus.ru/lessons/linux-hl/
