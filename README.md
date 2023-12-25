@@ -53,8 +53,8 @@ total 10961\
 total 40069\
 -rw-r--r--. 1 root root 40997929 Dec  2 09:17 pg2600.converter.log
 
-Сколько места занимает один и тот же файл в разных пулах:
-[root@otus-task5 ~]# **zfs list**\
+Сколько места занимает один и тот же файл в разных пулах:\
+[root@otus-task5 ~]# **zfs list**
 ```
 NAME   USED  AVAIL     REFER  MOUNTPOINT
 m1    21.8M   330M     21.6M  /m1
