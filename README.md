@@ -7,6 +7,18 @@
 Цель:\
 Научиться самостоятельно устанавливать ZFS, настраивать пулы, изучить основные возможности ZFS.
 ### 1. Определение алгоритма с наилучшим сжатием ###
+Создаём 4 пула по два диска в режиме RAID 1 (зеркало):\
+zpool create m1 mirror /dev/sdb /dev/sdc\
+zpool create m2 mirror /dev/sdd /dev/sde\
+zpool create m3 mirror /dev/sdf /dev/sdg\
+zpool create m4 mirror /dev/sdh /dev/sdi
+
+Добавим разные алгоритмы сжатия в каждую файловую систему:\
+zfs set compression=lzjb m1\
+zfs set compression=lz4 m2\
+zfs set compression=gzip-9 m3\
+zfs set compression=zle m4
+
 Информация о пулах:\
 [root@otus-task5 ~]# **zpool list**\
 NAME   SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT\
