@@ -55,12 +55,13 @@ total 40069\
 
 Сколько места занимает один и тот же файл в разных пулах:\
 [root@otus-task5 ~]# **zfs list**\
+```
 NAME   USED  AVAIL     REFER  MOUNTPOINT\
 m1    21.8M   330M     21.6M  /m1\
 m2    17.8M   334M     17.6M  /m2\
 **m3    11.0M   341M     10.7M  /m3**\
 m4    39.5M   312M     39.2M  /m4
-
+```
 Степень сжатия файлов:\
 [root@otus-task5 ~]# **zfs get all | grep compressratio | grep -v ref**\
 m1    compressratio         1.81x                  -\
@@ -70,8 +71,9 @@ m4    compressratio         1.00x                  -\
 Видно, что алгоритм сжатия gzip-9 - самый эффективный.
 ### 2. Определить настройки пула ###
 Проверим, возможно ли импортировать данный каталог в пул:
+
+[root@otus-task5 ~]# **zpool import -d zpoolexport/**
 ```
-[root@otus-task5 ~]# zpool import -d zpoolexport/
    pool: otus
      id: 6554193320433390805
   state: ONLINE
@@ -84,8 +86,9 @@ m4    compressratio         1.00x                  -\
             /root/zpoolexport/fileb  ONLINE
 ```
 Информация о составе импортированного пула:
+
+[root@otus-task5 ~]# **zpool status**
 ```
-[root@otus-task5 ~]# zpool status
 ...
   pool: otus
  state: ONLINE
